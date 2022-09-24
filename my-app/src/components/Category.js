@@ -13,10 +13,14 @@ const Category = ({ category, addToCart }) => {
                 addToCart(meal);
               }}
             >
-              <h3>{meal.title}</h3>
-              <p>{meal.price} €</p>
-              {meal.popular && <p className="popular">popular</p>}
-              <img src={meal.picture} alt="meal" />
+              <div className="meal-container-left">
+                <h3>{meal.title}</h3>
+                <p>{meal.price} €</p>
+                {meal.popular && <p className="popular">popular</p>}
+              </div>
+              <div className="meal-container-right">
+                <img src={meal.picture} alt="meal" />
+              </div>
             </article>
           );
         })}

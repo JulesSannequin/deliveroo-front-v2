@@ -2,6 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Category from "./components/Category";
+import logo from "../src/images/deliveroo-1.svg";
 
 function App() {
   const [data, setData] = useState({});
@@ -53,14 +54,20 @@ function App() {
     <p> Loading... </p>
   ) : (
     <div className="app">
-      <div className="hero">
-        <div className="container hero-container"></div>
-        <div>
-          <h1>{data.restaurant.name}</h1>
-          <p>{data.restaurant.description}</p>
+      <div className="header">
+        <div className="header-container">
+          <img src={logo} alt="logo" />
         </div>
+      </div>
+      <div className="hero">
+        <div className="container hero-container">
+          <div>
+            <h1>{data.restaurant.name}</h1>
+            <p>{data.restaurant.description}</p>
+          </div>
 
-        <img src={data.restaurant.picture} alt="restaurant-meal" />
+          <img src={data.restaurant.picture} alt="restaurant-meal" />
+        </div>
       </div>
 
       <main className="container">
