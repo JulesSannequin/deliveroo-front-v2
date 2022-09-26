@@ -90,8 +90,12 @@ article {
   height: 160px;
   padding: 15px;
   border-radius: 5px;
-  
-  
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+article:hover {
+  box-shadow: 5px 5px 2px 1px lightgray;
 }
 
 article img {
@@ -104,9 +108,6 @@ article img {
 .meals-container {
   display: flex;
   flex-wrap: wrap;
-  
-
- 
 }
 
 article:not(:nth-child(even)) {
@@ -115,8 +116,6 @@ article:not(:nth-child(even)) {
 
 .main {
   display: flex;
-  
-  
 }
 
 .main-left {
@@ -126,14 +125,43 @@ article:not(:nth-child(even)) {
 
 .main-right {
   flex:1;
-  height: 100px;
-  border: solid green 2px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
   position: sticky;
   top: 30px;
   align-self: flex-start;
   margin-left: 2rem;
   margin-top: 2rem;
+  font-size: 20px;
+  overflow: scroll;
+  box-shadow: 5px 5px 2px 1px lightgray;
 
+}
+
+.main-right button {
+  border-radius: 50%;
+  color: #00CCBC;
+  background-color: white;
+  border-color: #00CCBC;
+}
+
+.main-right-card {
+ margin-top: 1rem;
+ margin-right: 1rem;
+}
+
+.main-right-counter {
+  display: flex;
+  width: 5rem;
+  justify-content: space-evenly;
+}
+
+.main-right-line {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  padding: 1rem 0;
 }
 
 .meal-container-left {
@@ -146,5 +174,33 @@ article:not(:nth-child(even)) {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.validate-cart {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.validate-cart-container button {
+  border-radius: 5px;
+  width: 12rem;
+  height: 2rem;
+  background-color: #00CCBC;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  
+}
+
+.validate-cart-container button:hover {
+  box-shadow: 3px 3px 3px 1px gray;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  border: solid 2px #00CCBC;
+  margin-bottom: 1rem;
 }
 

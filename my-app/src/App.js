@@ -65,7 +65,6 @@ function App() {
             <h1>{data.restaurant.name}</h1>
             <p>{data.restaurant.description}</p>
           </div>
-
           <img src={data.restaurant.picture} alt="restaurant-meal" />
         </div>
       </div>
@@ -85,31 +84,45 @@ function App() {
           })}
         </div>
         <div className="main-right">
-          {cart.map((meal, index) => {
-            total += meal.quantity * meal.price;
-            return (
-              <div key={meal.id}>
-                <button
-                  onClick={() => {
-                    removeFromCart(meal);
-                  }}
-                >
-                  -
-                </button>
-                <span>{meal.quantity}</span>
-                <button
-                  onClick={() => {
-                    addToCart(meal);
-                  }}
-                >
-                  +
-                </button>
-                <span>{meal.title}</span>
-                <span>{(meal.price * meal.quantity).toFixed(2)} €</span>
-              </div>
-            );
-          })}
-          <p>Total : {total.toFixed(2)}</p>
+          <div className="main-right-card">
+            {cart.map((meal, index) => {
+              total += meal.quantity * meal.price;
+              return (
+                <div key={meal.id}>
+                  <div className="main-right-line">
+                    <div className="main-right-counter">
+                      <button
+                        onClick={() => {
+                          removeFromCart(meal);
+                        }}
+                      >
+                        -
+                      </button>
+                      <span>{meal.quantity}</span>
+                      <button
+                        onClick={() => {
+                          addToCart(meal);
+                        }}
+                      >
+                        +
+                      </button>
+                    </div>
+                    <span>{meal.title}</span>
+                    <span>{(meal.price * meal.quantity).toFixed(2)} €</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="total">
+            <p>Total : {total.toFixed(2)}</p>
+          </div>
+
+          <div className="validate-cart">
+            <div className="validate-cart-container">
+              <button>Valider mon panier</button>
+            </div>
+          </div>
         </div>
       </main>
     </div>
