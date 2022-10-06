@@ -204,6 +204,35 @@ article:not(:nth-child(even)) {
   margin-bottom: 1rem;
 }
 
+.footer {
+  background-color:#00CCBC;
+color: white;
+height: 5rem;
+display: flex;
+justify-content: center;
+margin-top: 2rem;
+line-height: 25px;
+}
+
+
+.footer-container {
+
+width: 30rem;
+text-align: center;
+
+}
+
+.footer-container a {
+text-decoration: none;
+background: linear-gradient(to right,#00CCBC , steelblue);
+color: white;
+border-radius: 2px;
+}
+
+.footer-container a:hover {
+color: blue;
+}
+
 @media (max-width: 1024px) {
   .hero-container h1 {
     font-size: 30px;
@@ -295,5 +324,4 @@ article:not(:nth-child(even)) {
     top: 30px;
     right: 50%;
   }
-
 }
