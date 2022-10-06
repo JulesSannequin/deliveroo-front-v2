@@ -61,7 +61,7 @@ function App() {
       </div>
       <div className="hero">
         <div className="container hero-container">
-          <div>
+          <div className="text-hero-container">
             <h1>{data.restaurant.name}</h1>
             <p>{data.restaurant.description}</p>
           </div>

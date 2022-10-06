@@ -204,3 +204,96 @@ article:not(:nth-child(even)) {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 1024px) {
+  .hero-container h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .hero-container img {
+    width: 320px;
+    margin-right: 1rem;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .main-left {
+    max-width: 780px;
+  }
+
+  .main-right {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  article {
+    width: 100%;
+    margin-left: 2rem;
+  }
+
+  h2 {
+    margin-left: 2rem;
+  }
+
+  .main-right {
+    right: 10px;
+    
+  }
+
+  .meals-container {
+    width: 30rem;
+  }
+
+  article:not(:nth-child(even)) {
+    margin-right: 0px;
+}
+}
+
+@media (max-width: 425px) {
+  .hero img {
+    width: 180px;
+    object-fit: cover;
+   
+  }
+
+  .hero-container h1 {
+    font-size: 15px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .text-hero-container {
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+   
+  }
+
+  .meals-container {
+    width: 25rem;
+  }
+  
+
+  .main-right {
+    top: 30px;
+    right: 50%;
+  }
+
+}
